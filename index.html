@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prashant Kasula — Full-Stack Developer</title>
+<meta name="description" content="Full-Stack Developer building scalable, high-performance web applications." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M8 3v4M16 3v4M3 10h18" /><rect x="7" y="13" width="3" height="3" rx="0.6" fill="currentColor" stroke="none" /></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7.5A2.5 2.5 0 015.5 5h3l2 2.5h7A2.5 2.5 0 0120 10v7a2.5 2.5 0 01-2.5 2.5h-12A2.5 2.5 0 013 17z" /></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" /></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8L3.5 9.7l5.9-.8z" /></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M3 7l9 6 9-6" /></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5C4 4.7 4.7 4 5.5 4h2c.7 0 1.3.5 1.5 1.2l.7 2.6c.1.6-.1 1.2-.6 1.5l-1.3.9a11 11 0 005.9 5.9l.9-1.3c.3-.5.9-.7 1.5-.6l2.6.7c.7.2 1.2.8 1.2 1.5v2c0 .8-.7 1.5-1.5 1.5C9.9 20 4 14.1 4 5.5z" /></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" /></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.6" /><path d="M5 20c0-3.4 3.1-5.4 7-5.4s7 2 7 5.4" /></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2.5" /><path d="M9 7V5.5A1.5 1.5 0 0110.5 4h3A1.5 1.5 0 0115 5.5V7M3 12h18" /></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8.5L12 4.5l9 4-9 4z" /><path d="M6.5 11v4.5c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5V11" /></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.5 3.5l6 6-3 3-6-6zM11.5 6.5L4 14v6h6l7.5-7.5" /></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15m0 0l-5-5m5 5l-5 5" /></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 19h16" /></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5A1.5 1.5 0 0116.5 20h-11A1.5 1.5 0 014 18.5v-11A1.5 1.5 0 015.5 6H10" /></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.16.59.67.5A10 10 0 0022 12A10 10 0 0012 2z" /></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.3 8.65 21 11 21 14.1V21h-4v-6.1c0-1.5-.53-2.5-1.85-2.5-1.13 0-1.8.76-2.1 1.5-.1.26-.13.62-.13.98V21H9z" /></symbol>
+</svg>
+
+<header class="header">
+  <div class="shell header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark">PK</span>
+      <span>Prashant Kasula</span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <a class="nav__link is-active" href="#top">Home</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#experience">Experience</a>
+      <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#skills">Skills</a>
+      <a class="nav__link" href="#education">Education</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <svg width="18" height="18"><use href="#i-menu" /></svg>
+    </button>
+
+    <a class="btn btn--primary btn--sm" href="#contact">
+      Download CV
+      <svg width="15" height="15"><use href="#i-download" /></svg>
+    </a>
+  </div>
+
+  <div class="mobile-nav">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main class="shell" id="top">
+
+  <section class="hero">
+    <div>
+      <p class="hero__eyebrow">Hello, I'm</p>
+      <h1 class="hero__title">Prashant<br /><span>Kasula</span></h1>
+      <div class="hero__rule"></div>
+      <p class="hero__intro">Full-Stack Developer passionate about building scalable, high-performance web applications with clean code and great user experience.</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects">View My Work <svg width="16" height="16"><use href="#i-arrow" /></svg></a>
+        <a class="btn btn--ghost" href="#contact">Contact Me</a>
+      </div>
+
+      <div class="social">
+        <a class="social__link" href="https://github.com" aria-label="GitHub"><svg width="19" height="19"><use href="#i-github" /></svg></a>
+        <a class="social__link" href="https://linkedin.com" aria-label="LinkedIn"><svg width="18" height="18"><use href="#i-linkedin" /></svg></a>
+        <a class="social__link" href="mailto:kasulaprashant544@gmail.com" aria-label="Email"><svg width="19" height="19"><use href="#i-mail" /></svg></a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__top"><svg width="24" height="24" style="color:var(--accent)"><use href="#i-calendar" /></svg><span class="stat__value">3+</span></div>
+        <p class="stat__label">Years Experience</p>
+      </div>
+      <div class="stat">
+        <div class="stat__top"><svg width="24" height="24" style="color:var(--accent)"><use href="#i-folder" /></svg><span class="stat__value">10+</span></div>
+        <p class="stat__label">Projects Completed</p>
+      </div>
+      <div class="stat">
+        <div class="stat__top"><svg width="24" height="24" style="color:var(--accent)"><use href="#i-code" /></svg><span class="stat__value">5+</span></div>
+        <p class="stat__label">Technologies</p>
+      </div>
+      <div class="stat">
+        <div class="stat__top"><svg width="24" height="24" style="color:var(--accent)"><use href="#i-star" /></svg><span class="stat__value">100%</span></div>
+        <p class="stat__label">Dedication</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__body">
+      <div class="section-head">
+        <svg width="26" height="26" style="color:var(--accent)"><use href="#i-user" /></svg>
+        <h2>About Me</h2>
+      </div>
+      <p>I'm a Full-Stack Developer with experience in building scalable web applications using modern technologies. I enjoy turning complex problems into simple, beautiful and intuitive solutions.</p>
+      <p>Currently working as a Software Engineer at Workalaya, where I contribute to building the Digital Garage platform.</p>
+    </div>
+
+    <div class="about__contact">
+      <div class="contact-item">
+        <svg width="22" height="22" style="color:var(--accent)"><use href="#i-mail" /></svg>
+        <div>
+          <p class="contact-item__label">Email</p>
+          <a class="contact-item__value" href="mailto:kasulaprashant544@gmail.com">kasulaprashant544@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <svg width="22" height="22" style="color:var(--accent)"><use href="#i-phone" /></svg>
+        <div>
+          <p class="contact-item__label">Phone</p>
+          <p class="contact-item__value">+977 9861132265</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <svg width="22" height="22" style="color:var(--accent)"><use href="#i-pin" /></svg>
+        <div>
+          <p class="contact-item__label">Location</p>
+          <p class="contact-item__value">Lalitpur, Nepal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="body-grid">
+
+    <div class="stack">
+      <section id="experience">
+        <div class="section-head">
+          <svg width="26" height="26" style="color:var(--accent)"><use href="#i-briefcase" /></svg>
+          <h2>Experience</h2>
+          <a class="section-head__link" href="#experience">View All <svg width="15" height="15"><use href="#i-arrow" /></svg></a>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <span class="timeline__dot"></span>
+            <h3 class="timeline__role">Software Engineer, Full-time</h3>
+            <p class="timeline__meta"><span class="timeline__org">Workalaya</span> &nbsp;•&nbsp; Jan 2026 – Present</p>
+            <ul class="timeline__points">
+              <li>Built a scalable Digital Garage platform for vehicle data management.</li>
+              <li>Designed high-performance system architecture focused on scalability, fault tolerance, and low latency.</li>
+              <li>Adopted a monorepo architecture to streamline development and improve maintainability.</li>
+            </ul>
+          </article>
+
+          <article class="timeline__item">
+            <span class="timeline__dot"></span>
+            <h3 class="timeline__role">Frontend Web Developer, Internship</h3>
+            <p class="timeline__meta"><span class="timeline__org">Workalaya</span> &nbsp;•&nbsp; Nov 2025 – Jan 2026</p>
+            <ul class="timeline__points">
+              <li>Developed responsive frontend interfaces using React.js.</li>
+              <li>Integrated REST APIs and ensured seamless data flow.</li>
+              <li>Built reusable UI components for consistent design.</li>
+            </ul>
+          </article>
+
+          <article class="timeline__item">
+            <span class="timeline__dot"></span>
+            <h3 class="timeline__role">Frontend Developer Intern (React.js)</h3>
+            <p class="timeline__meta"><span class="timeline__org">Weblinx IT Solution</span> &nbsp;•&nbsp; Feb 2025 – May 2025</p>
+            <ul class="timeline__points">
+              <li>Developed and maintained responsive web applications using React.js.</li>
+              <li>Worked with Material-UI and Tailwind CSS.</li>
+              <li>Collaborated with team members using Git and GitHub.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="section-head">
+          <svg width="26" height="26" style="color:var(--accent)"><use href="#i-cap" /></svg>
+          <h2>Education</h2>
+        </div>
+        <div class="card edu-list">
+          <article class="edu">
+            <span class="timeline__dot"></span>
+            <div class="edu__top">
+              <h3 class="edu__degree">Bachelor's of Science in Computer Science and IT</h3>
+              <span class="edu__dates">Apr 2021 – Mar 2025</span>
+            </div>
+            <p class="edu__school">Nist College, Banepa</p>
+          </article>
+          <article class="edu">
+            <span class="timeline__dot"></span>
+            <div class="edu__top">
+              <h3 class="edu__degree">Higher Secondary Level / +2 Science</h3>
+              <span class="edu__dates">Aug 2018 – May 2020</span>
+            </div>
+            <p class="edu__school">Janapremi College, Bhaktapur</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="stack">
+      <section id="projects">
+        <div class="section-head">
+          <svg width="26" height="26" style="color:var(--accent)"><use href="#i-code" /></svg>
+          <h2>Projects</h2>
+          <a class="section-head__link" href="#projects">View All <svg width="15" height="15"><use href="#i-arrow" /></svg></a>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project__top">
+              <h3 class="project__title">StreamLab</h3>
+              <a class="project__link" href="https://github.com" aria-label="Open StreamLab"><svg width="17" height="17"><use href="#i-external" /></svg></a>
+            </div>
+            <div class="tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Zustand</span>
+            </div>
+            <p class="project__desc">Developed a simple website using React.js and Tailwind CSS. Used Zustand for theme configuration.</p>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <h3 class="project__title">User Authentication Application</h3>
+              <a class="project__link" href="https://github.com" aria-label="Open User Authentication Application"><svg width="17" height="17"><use href="#i-external" /></svg></a>
+            </div>
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">JWT</span>
+            </div>
+            <p class="project__desc">Developed a Node.js application implementing user authentication with JWT and bcrypt. Implemented middleware to protect private routes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-head">
+          <svg width="26" height="26" style="color:var(--accent)"><use href="#i-tools" /></svg>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skill-groups">
+          <div class="skill-group">
+            <p class="skill-group__label">Languages</p>
+            <div class="chips">
+              <span class="chip">JavaScript (ES6+)</span>
+              <span class="chip">Go</span>
+              <span class="chip">Python</span>
+              <span class="chip">PHP</span>
+              <span class="chip">Java</span>
+              <span class="chip">C++</span>
+              <span class="chip">C</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group__label">Backend &amp; Frameworks</p>
+            <div class="chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">Fastify</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">Socket.io</span>
+              <span class="chip">JWT</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Redis</span>
+              <span class="chip">RabbitMQ</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group__label">Technologies &amp; Tools</p>
+            <div class="chips">
+              <span class="chip">Docker</span>
+              <span class="chip">Git</span>
+              <span class="chip">Postman</span>
+              <span class="chip">Linux</span>
+              <span class="chip">AWS</span>
+              <span class="chip">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="shell footer" id="contact">
+  <div class="footer__card">
+    <div class="footer__lead">
+      <svg width="34" height="34" style="color:var(--accent)"><use href="#i-mail" /></svg>
+      <div>
+        <h3>Let's Connect</h3>
+        <p>I'm always open to discussing new opportunities or interesting projects.</p>
+      </div>
+    </div>
+
+    <div class="footer__contacts">
+      <span><svg width="17" height="17" style="color:var(--accent)"><use href="#i-phone" /></svg>+977 9861132265</span>
+      <a href="mailto:kasulaprashant544@gmail.com"><svg width="17" height="17" style="color:var(--accent)"><use href="#i-mail" /></svg>kasulaprashant544@gmail.com</a>
+    </div>
+
+    <div class="social social--sm footer__social">
+      <a class="social__link" href="https://github.com" aria-label="GitHub"><svg width="18" height="18"><use href="#i-github" /></svg></a>
+      <a class="social__link" href="https://linkedin.com" aria-label="LinkedIn"><svg width="17" height="17"><use href="#i-linkedin" /></svg></a>
+      <a class="social__link" href="mailto:kasulaprashant544@gmail.com" aria-label="Email"><svg width="18" height="18"><use href="#i-mail" /></svg></a>
+    </div>
+  </div>
+
+  <p class="copyright">© 2025 Prashant Kasula. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
